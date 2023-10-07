@@ -8,6 +8,7 @@ for current_money in money_as_string:
 final_sum = []
 start_index = 0
 
+# for beggar in range(number_of_beggars):
 while start_index < number_of_beggars:
     current_beggar_sum = 0
     for current_index in range(start_index, len(money_as_integers), number_of_beggars):
