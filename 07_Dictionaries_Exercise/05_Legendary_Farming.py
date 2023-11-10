@@ -1,8 +1,9 @@
 items = {"shards": 0, "fragments": 0, "motes": 0}
-current_items = input().split()
+# current_items = input().split()
 obtained = False
 
 while not obtained:
+    current_items = input().split()
     for index in range(0, len(current_items), 2):
         value = int(current_items[index])
         key = current_items[index + 1].lower()
@@ -26,10 +27,10 @@ while not obtained:
             obtained = True
         if obtained:
             break
-    if obtained:
-        break
-
-    current_items = input().split()
+    # if obtained:
+    #     break
+    #
+    # current_items = input().split()
 print(f"{legendary_item} obtained!")
 for material, quantity in items.items():
     print(f"{material}: {quantity}")
