@@ -10,15 +10,18 @@ while not obtained:
             items[key] = 0
         items[key] += value
         if items["shards"] >= 250:
-            print(f"Shadowmourne obtained!")
+            legendary_item = "Shadowmourne"
+            # print(f"Shadowmourne obtained!")
             items["shards"] -= 250
             obtained = True
         elif items["fragments"] >= 250:
-            print(f"Valanyr obtained!")
+            legendary_item = "Valanyr"
+            # print(f"Valanyr obtained!")
             items["fragments"] -= 250
             obtained = True
         elif items["motes"] >= 250:
-            print(f"Dragonwrath obtained!")
+            legendary_item = "Dragonwrath"
+            # print(f"Dragonwrath obtained!")
             items["motes"] -= 250
             obtained = True
         if obtained:
@@ -27,5 +30,6 @@ while not obtained:
         break
 
     current_items = input().split()
+print(f"{legendary_item} obtained!")
 for material, quantity in items.items():
     print(f"{material}: {quantity}")
